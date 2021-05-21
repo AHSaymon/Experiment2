@@ -1,0 +1,18 @@
+package SdetPractise;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Lesson4 {
+	
+	public static void main(String[] args) {
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver= new FirefoxDriver();
+		driver.get("http://sheradambd.com/product?name=router");
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/nav[1]/pagination-controls[1]/pagination-template[1]/ul[1]/li[10]/a[1]")).click();
+	}
+
+}

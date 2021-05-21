@@ -1,0 +1,22 @@
+package SdetPractise;
+
+//import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Lesson4 {
+	
+	public static void main(String[] args) {
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver= new FirefoxDriver();
+		driver.get("http://sheradambd.com/home");
+		driver.findElement(By.xpath("//input[@id='search']")).sendKeys("mouse");
+		driver.findElement(By.xpath("//button[@type='button']")).click();		
+	}
+
+}
